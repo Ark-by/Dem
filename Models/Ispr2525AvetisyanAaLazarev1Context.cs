@@ -60,7 +60,6 @@ public partial class Ispr2525AvetisyanAaLazarev1Context : DbContext
                 .HasColumnName("Описание товара");
             entity.Property(e => e.Поставщик).HasColumnType("text");
             entity.Property(e => e.Производитель).HasColumnType("text");
-            entity.Property(e => e.Фото).HasColumnType("text");
         });
 
         modelBuilder.Entity<UserImport>(entity =>

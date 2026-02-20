@@ -27,5 +27,5 @@ public partial class Tovar
 
     public string? ОписаниеТовара { get; set; }
 
-    public string? Фото { get; set; }
+    public byte[]? Фото { get; set; }
 }
