@@ -89,11 +89,10 @@ namespace pz4
                 {
                     Product = product,
                     Margin = new Padding(5),
-                    Width = flowLayoutPanel1.Width - 25 // с учётом скролла
+                    Width = flowLayoutPanel1.Width - 25
                 };
                 card.AddToCartClicked += (s, e) =>
                 {
-                    // Логика добавления в корзину
                     MessageBox.Show($"Товар '{product.НаименованиеТовара}' добавлен в корзину");
                 };
                 flowLayoutPanel1.Controls.Add(card);

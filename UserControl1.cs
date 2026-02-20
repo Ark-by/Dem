@@ -34,7 +34,6 @@ namespace pz4
         {
             if (_product == null) return;
 
-            // Заполнение полей
             lblCategory.Text = _product.КатегорияТовара;
             lblName.Text = _product.НаименованиеТовара;
             lblDescription.Text = _product.ОписаниеТовара;
@@ -45,7 +44,6 @@ namespace pz4
             lblStock.Text = _product.КолВоНаСкладе?.ToString() ?? "0";
             lblDiscount.Text = _product.ДействующаяСкидка?.ToString() + "%";
 
-            // Загрузка фото (предполагается, что поле Фото содержит путь к файлу)
             if (!string.IsNullOrEmpty(_product.Фото))
             {
                 try
@@ -54,12 +52,11 @@ namespace pz4
                 }
                 catch
                 {
-                    pictureBoxPhoto.Image = null; // или заглушка
+                    pictureBoxPhoto.Image = null;
                 }
             }
         }
 
-        // Событие для кнопки "В корзину"
         public event EventHandler AddToCartClicked;
 
         private void btnAddToCart_Click(object sender, EventArgs e)

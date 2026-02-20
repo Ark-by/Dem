@@ -117,7 +117,7 @@
             tableLayoutPanelRight.RowCount = 9;
             tableLayoutPanelRight.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanelRight.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanelRight.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F)); // для описания (можно больше)
+            tableLayoutPanelRight.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
             tableLayoutPanelRight.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanelRight.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanelRight.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
@@ -341,7 +341,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "UserControl1";
-            Size = new Size(453, 243); // чуть увеличена высота
+            Size = new Size(453, 243);
             ((System.ComponentModel.ISupportInitialize)pictureBoxPhoto).EndInit();
             tableLayoutPanelMain.ResumeLayout(false);
             tableLayoutPanelRight.ResumeLayout(false);
