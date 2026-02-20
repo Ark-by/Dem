@@ -46,19 +46,19 @@ public partial class ЗаказImport
         }
         if (string.IsNullOrEmpty(ДатаЗаказа))
         {
-            throw new ValidationException("Артикул не должен быть пустым");
+            throw new ValidationException("ДатаЗаказа не должен быть пустым");
         }
         if (string.IsNullOrEmpty(ДатаДоставки))
         {
-            throw new ValidationException("Артикул не должен быть пустым");
+            throw new ValidationException("ДатаДоставки не должен быть пустым");
         }
         if (string.IsNullOrEmpty(ФиоАвторизированногоКлиента))
         {
-            throw new ValidationException("Артикул не должен быть пустым");
+            throw new ValidationException("ФиоАвторизированногоКлиента не должен быть пустым");
         }
         if (string.IsNullOrEmpty(СтатусЗаказа))
         {
-            throw new ValidationException("Артикул не должен быть пустым");
+            throw new ValidationException("СтатусЗаказа не должен быть пустым");
         }
         context.SaveChanges();
     }

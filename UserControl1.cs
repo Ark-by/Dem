@@ -1,13 +1,8 @@
-﻿using pz4.Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using System.IO;
 using System.Windows.Forms;
+using pz4.Models;
+using pz4.Properties;
 
 namespace pz4
 {
@@ -34,26 +29,45 @@ namespace pz4
         {
             if (_product == null) return;
 
-            lblCategory.Text = _product.КатегорияТовара;
-            lblName.Text = _product.НаименованиеТовара;
-            lblDescription.Text = _product.ОписаниеТовара;
-            lblManufacturer.Text = _product.Производитель;
-            lblSupplier.Text = _product.Поставщик;
+            lblCategory.Text = _product.КатегорияТовара ?? "";
+            lblName.Text = _product.НаименованиеТовара ?? "";
+            lblDescription.Text = _product.ОписаниеТовара ?? "";
+            lblManufacturer.Text = _product.Производитель ?? "";
+            lblSupplier.Text = _product.Поставщик ?? "";
             lblPrice.Text = _product.Цена?.ToString("C") ?? "0";
-            lblUnit.Text = _product.ЕдиницаИзмерения;
+            lblUnit.Text = _product.ЕдиницаИзмерения ?? "";
             lblStock.Text = _product.КолВоНаСкладе?.ToString() ?? "0";
             lblDiscount.Text = _product.ДействующаяСкидка?.ToString() + "%";
 
-            if (!string.IsNullOrEmpty(_product.Фото))
+            Image newImage = null;
+            if (_product.Фото != null && _product.Фото.Length > 0)
             {
                 try
                 {
-                    pictureBoxPhoto.ImageLocation = _product.Фото;
+                    using (var ms = new MemoryStream(_product.Фото))
+                    {
+                        newImage = Image.FromStream(ms);
+                    }
                 }
                 catch
                 {
-                    pictureBoxPhoto.Image = null;
+                    newImage = null;
                 }
+            }
+
+            if (pictureBoxPhoto.Image != null)
+            {
+                pictureBoxPhoto.Image.Dispose();
+                pictureBoxPhoto.Image = null;
+            }
+
+            if (newImage != null)
+            {
+                pictureBoxPhoto.Image = newImage;
+            }
+            else
+            {
+                pictureBoxPhoto.Image = Properties.Resources.no_image;
             }
         }
 

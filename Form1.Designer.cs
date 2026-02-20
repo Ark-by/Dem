@@ -63,9 +63,9 @@
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { номерЗаказаDataGridViewTextBoxColumn, артикулЗаказаDataGridViewTextBoxColumn, датаЗаказаDataGridViewTextBoxColumn, датаДоставкиDataGridViewTextBoxColumn, адресПунктаВыдачиDataGridViewTextBoxColumn, фиоАвторизированногоКлиентаDataGridViewTextBoxColumn, кодДляПолученияDataGridViewTextBoxColumn, статусЗаказаDataGridViewTextBoxColumn, Column2, Column1 });
             dataGridView1.DataSource = ЗаказBindingSource;
             dataGridView1.Dock = DockStyle.Bottom;
-            dataGridView1.Location = new Point(0, 305);
+            dataGridView1.Location = new Point(0, 304);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(800, 244);
+            dataGridView1.Size = new Size(1264, 377);
             dataGridView1.TabIndex = 0;
             // 
             // номерЗаказаDataGridViewTextBoxColumn
@@ -190,9 +190,9 @@
             flowLayoutPanel1.Controls.Add(userControl11);
             flowLayoutPanel1.Dock = DockStyle.Bottom;
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Location = new Point(0, 41);
+            flowLayoutPanel1.Location = new Point(0, 40);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(800, 264);
+            flowLayoutPanel1.Size = new Size(1264, 264);
             flowLayoutPanel1.TabIndex = 5;
             flowLayoutPanel1.WrapContents = false;
             // 
@@ -202,7 +202,7 @@
             userControl11.Location = new Point(3, 3);
             userControl11.Name = "userControl11";
             userControl11.Product = null;
-            userControl11.Size = new Size(409, 187);
+            userControl11.Size = new Size(10, 10);
             userControl11.TabIndex = 0;
             // 
             // _tovarBindingSource
@@ -213,7 +213,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 549);
+            ClientSize = new Size(1264, 681);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(bt_Delete);
             Controls.Add(bt_Add);
